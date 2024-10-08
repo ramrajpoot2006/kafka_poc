@@ -1,0 +1,31 @@
+Reference link: 
+	https://www.javainuse.com/spring/sprboot
+	https://www.javainuse.com/spring/spring-boot-apache-kafka-hello-world
+
+Kafka version: 2.1.0 Kafka version: 2.1.0, supports Java 11, download link: https://kafka.apache.org/downloads
+
+Topic : kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic demotest-topic
+
+show topic list
+	kafka-topics.bat --list --zookeeper localhost:2181  
+	
+Producer:
+		C:\kafka_2.12-0.10.2.1>.\bin\windows\ kafka-console-producer.bat --broker-list localhost:9092 --topic demotest-topic first message1
+
+Consumer:	
+	C:\kafka_2.12-0.10.2.1>.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic demotest-topic --from-beginning
+	
+	Netstat -an | find „2181“
+	
+	
+1. Run Zookeeper: Open a command prompt and start the Zookeeper- 
+			C:\kafka_2.12-0.10.2.1>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+2. Run kafka: Open a new command prompt and start the Apache Kafka
+			C:\kafka_2.12-0.10.2.1>.\bin\windows\kafka-server-start.bat .\config\server.properties
+			
+			
+3. .\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic order_topic
+
+
+7838836689			

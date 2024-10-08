@@ -1,0 +1,85 @@
+Analysis
+
+new endpoint: /api/ecom/products/{productId}/skus/{sku}
+
+ArticleInfo
+		->division 		: String, is it divisionCode ?,  existing response: productDivision->code ?
+		->articleGender	: String
+		
+EcomArticleInfo
+		->taxClass	:	String, is it taxClassId ?, need to confirm
+		->flashProduct: Boolean, not coming
+		
+Map<String, Sku>
+		->SKU
+			->ean: 			String
+			->upc: 			String 
+			->size:			String    ???????
+			->displaySize:	String 
+			->literalSize:  String
+		
+		
+		
+https://stg-ps.api.3stripes.io/api/ecom/products/FX7979/skus/KS593475		
+
+hleQ453WcjZz8A7MtT0OcS66lSm36p38
+ZG62OVR5cumBgT0II6Ht1GdVjpwKadv4 : stg
+
+886100e95cfeb8f04c9e5ce6f914dab2d4491ceaf5c8617b6c66b9649395d918
+
+https://stg-ps.api.3stripes.io/api/ecom/products/FX7979/skus/KS593475?api-key=hleQ453WcjZz8A7MtT0OcS66lSm36p38
+https://stg-ps.api.3stripes.io/articles/EG0490?site=DE
+###########################
+
+% curl --location --request GET 'http://tf-product-api.glass.deu01.k8s.anteater.dub.aws.k8s.3stripes.net/api/ecom/products/011040/skus/011040_720' \
+
+--header 'x-site-locale: es_ES' \
+
+--header 'x-site-id: adidas-ES' \
+
+--header 'Accept: application/hal+json' \
+
+--header 'x-ecom-token: cYx:[6LrcZF.a7GR'
+#### Response ####
+
+{
+"productId": "011040",
+"sku": "011040_720",
+"modelNumber": "10009",
+"ean": "4003421360780",
+"upc": "098090008853",
+"gender": "U",
+"onlineFrom": "2013-05-31T22:00:00.000Z",
+"onlineTo": "2022-02-28T23:00:00.000Z",
+"literalSize": "720",
+"divisionCode": "1",
+"displayName": "Bota de fútbol World Cup",
+"productType": "inline",
+"saleChannels": [],
+"imageUrl": "https://assetmanagerpim-res.cloudinary.com/images/4a090b9f4a474337887ca59900e35bf3_9366/011040_00_plp_standard.jpg",
+"displaySize": "48 2/3",
+"color": "Black / Footwear White / None",
+"maxOrderQuantity": null,
+"pricingInformation": {
+"standardPrice": 150
+},
+"personalizable": true,
+"events": [
+{
+"eventType": "HypeQ",
+"channelTypes": [
+"Trilogy"
+],
+"eventEndDate": "9999-01-31T12:00:00.000Z",
+"eventStartDate": "9999-01-01T12:00:00.000Z",
+"exclusivityGroup": "Membership Tier 1"
+}
+],
+"postEventBehavior": "SOLD_OUT",
+"isValid": true,
+"_links": {
+"self": {
+"href": "/011040/skus/011040_720"
+}
+}
+}
