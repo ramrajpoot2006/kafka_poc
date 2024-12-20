@@ -1,0 +1,9 @@
+Kafka Delivery Semantics | At-Least-Once, At-Most-Once & Exactly-Once
+https://www.youtube.com/watch?v=V0c0qAP7sWk
+
+
+Note: The default delivery semantics for Kafka consumers is at most once:
+
+Architecture: https://www.youtube.com/watch?v=FwHc2iXsiPI
+
+Consumer group: https://www.youtube.com/watch?v=zVSaT0glaX8
